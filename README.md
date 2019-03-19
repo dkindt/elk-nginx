@@ -36,6 +36,8 @@ Warning: Journal has been rotated since unit was started. Log output is incomple
 ```
 Another way to verify is to navigate to your VM instance from the browser: http://[server.ip.address]   
 
+#### Create a login portal for Kibana 
+
 ## Resources
 - https://certbot.eff.org/lets-encrypt/ubuntuxenial-nginx.html
 - https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-18-04
