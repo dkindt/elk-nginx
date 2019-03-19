@@ -6,8 +6,8 @@ Resources:
 - https://support.google.com/domains/answer/3290309?hl=en
 
 Screenshots:
-```
+
 <img src="https://github.com/dkindt/it366/blob/master/images/kibana_dkindt.png"/>
 <img src="https://github.com/dkindt/it366/blob/master/images/kibana_dns.png"/>
 <img src="https://github.com/dkindt/it366/blob/master/images/kibana_ssl.png"/>
-```
+
