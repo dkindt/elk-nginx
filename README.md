@@ -7,8 +7,10 @@ create DNS record(s) in your web hosting panel. Usually, this is under the
 
 ## Securing your website with SSL
 #### Install Nginx
-`sudo apt update`   
-`sudo apt install nginx`
+```
+$ sudo apt update   
+$ sudo apt install nginx
+```
 
 #### Configure the Firewall
 ```
