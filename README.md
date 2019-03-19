@@ -1,10 +1,40 @@
 # Lab 4: PKI-1: HTTPS and Reverse Proxy
 
 ## Securing your website with SSL
+#### Install Nginx
+`sudo apt update`   
+`sudo apt install nginx`
 
-- __Nginx__ 
-- __Certbot__
-- __DNS__
+#### Configure the Firewall
+```
+$ sudo ufw app list
+Available Applications:   
+...
+  Nginx Full
+  Nginx HTTP
+  Nginx HTTPS
+...
+$ sudo ufw allow 'Nginx Full'
+```   
+#### Verify the installation   
+At this point, your web server should be up and running. To verify, type: 
+```
+$ sudo systemctl status nginx 
+● nginx.service - A high performance web server and a reverse proxy server
+   Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+   Active: active (running) since Sat 2019-03-16 00:10:45 UTC; 3 days ago
+     Docs: man:nginx(8)
+  Process: 733 ExecStart=/usr/sbin/nginx -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+  Process: 678 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+ Main PID: 736 (nginx)
+    Tasks: 2 (limit: 4915)
+   CGroup: /system.slice/nginx.service
+           ├─ 736 nginx: master process /usr/sbin/nginx -g daemon on; master_process on;
+           └─1002 nginx: worker process
+
+Warning: Journal has been rotated since unit was started. Log output is incomplete or unavailable.
+```
+Another way to verify is to navigate to your VM instance from the browser: http://[server.ip.address]   
 
 ## Resources
 - https://certbot.eff.org/lets-encrypt/ubuntuxenial-nginx.html
