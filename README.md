@@ -87,7 +87,11 @@ The --dry-run tests the auto-renewal process of certbot.
 ```
 $ sudo certbot --nginx -d [your-domain].com
 $ sudo certbot renew --dry-run
-```
+```    
+## Troubleshooting    
+- When editing yaml files, remember that indentation is *very* important. See [this](https://www.tutorialspoint.com/yaml/yaml_indentation_and_separation.htm) for more information.   
+- In your kibana.yml file, it is *crucial* to update `0.0.0.0` with `localhost`.   
+- If you've modified any of the configuration files, be sure to restart the corresponding service(s).   
 ## Resources
 - https://certbot.eff.org/lets-encrypt/ubuntuxenial-nginx.html
 - https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-18-04
