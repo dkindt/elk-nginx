@@ -1,6 +1,6 @@
 server {
 	
-	server_name dkindt.com www.dkindt.com;
+	server_name kibana.dkindt.com;
 	
 	auth_basic "Restricted Access";
 	auth_basic_user_file /etc/nginx/htpasswd.users;
@@ -14,31 +14,24 @@ server {
 		proxy_cache_bypass $http_upgrade;
 	}
 
+
     listen 443 ssl; # managed by Certbot
-    ssl_certificate /etc/letsencrypt/live/dkindt.com/fullchain.pem; # managed by Certbot
-    ssl_certificate_key /etc/letsencrypt/live/dkindt.com/privkey.pem; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/kibana.dkindt.com/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/kibana.dkindt.com/privkey.pem; # managed by Certbot
     include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
 
-
 }
 server {
-    if ($host = www.dkindt.com) {
+    if ($host = kibana.dkindt.com) {
         return 301 https://$host$request_uri;
     } # managed by Certbot
 
 
-    if ($host = dkindt.com) {
-        return 301 https://$host$request_uri;
-    } # managed by Certbot
-
-
-	listen 80;
 	
-	server_name dkindt.com www.dkindt.com;
+	server_name kibana.dkindt.com;
+    listen 80;
     return 404; # managed by Certbot
-
-
 
 
 }
