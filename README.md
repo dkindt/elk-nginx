@@ -1,9 +1,9 @@
-# Lab 4: PKI-1: HTTPS and Reverse Proxy
+# HTTPS and Reverse Proxy
 ## Point your domain name to your VM instance    
 In order to access your server using your domain name, you'll need to 
 create DNS record(s) in your web hosting panel. Usually, this is under the
 "DNS Settings" or something. Since I used Google Domains, this is what I did.    
-<img src="https://github.com/dkindt/it366/blob/master/images/kibana_dns.png"/>
+<img src="https://github.com/dkindt/elk-nginx/blob/master/images/kibana_dns.png"/>
 
 ## Securing your website with SSL
 #### Install Nginx
@@ -99,6 +99,6 @@ $ sudo certbot renew --dry-run
 
 ## Screenshots
 
-<img src="https://github.com/dkindt/it366/blob/master/images/kibana_dkindt.png"/>
-<img src="https://github.com/dkindt/it366/blob/master/images/kibana_ssl.png"/>
+<img src="https://github.com/dkindt/elk-nginx/blob/master/images/kibana_dkindt.png"/>
+<img src="https://github.com/dkindt/elk-nginx/blob/master/images/kibana_ssl.png"/>
 
